@@ -1,3 +1,5 @@
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
+
 import java.util.Scanner;
 
 public class Method {
@@ -52,21 +54,21 @@ public class Method {
     }
 
     public int timUCLN(int tuso, int mauso) {
-        int uocchung = 1;
-        int min=0;
-        if (tuso > mauso) {
-            min = mauso;
-        } else {
-            min = tuso;
-        }
+        int uocchungMax = 1;
+        int min ;
 
+        if (Math.abs(tuso) > Math.abs(mauso)) {
+            min = Math.abs(mauso);
+        } else {
+            min = Math.abs(tuso);
+        }
         for (int i = min; i > 1; i--) {
             if (mauso % i == 0 && tuso % i == 0) {
-                uocchung = i;
+                uocchungMax = i;
                 break;
             }
         }
-        return uocchung;
+        return uocchungMax;
     }
 
     public void timToiGian(PhanSo phanSo){
