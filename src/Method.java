@@ -12,6 +12,7 @@ public class Method {
             System.out.println("Moi nhap vao mau so :");
             phanSo.setMauso(Integer.parseInt(input.nextLine()));
             if(phanSo.getMauso()==0){
+                System.out.println("Mau so khong the = 0 , Moi nhap lai : ");
                 check=true;
             }
         }while (check);
